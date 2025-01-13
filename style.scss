@@ -61,19 +61,13 @@ html {
             }
 
             img {
-                /* min-width: 101%; */
-                min-height: 101%;
-                /* width: 101%; */
-                /* position: absolute; */
-                /* top: 50%; */
-                /* left: 50%; */
-                /* transform: translate(-50%, -50%); */
+                min-height: 100%;
 
-                @media (max-width: 1150px){
+                @media (max-width: 1150px) {
                     min-width: unset;
                     min-height: unset;
                     width: unset;
-                    height: 101%;
+                    height: 100%;
                 }
             }
         }
@@ -211,7 +205,7 @@ html {
 
     z-index: 10;
 
-    @media (height < 400px) {
+    @media (max-height: 400px) {
         bottom: 10vh;
     }
 
