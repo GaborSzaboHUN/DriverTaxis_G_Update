@@ -38,7 +38,7 @@ html {
 
     .slider {
         width: 100vw;
-        height: 100vw;
+        height: 100vh;
         z-index: 2;
 
         * {
@@ -46,12 +46,13 @@ html {
         }
 
         .item {
-            height: 100vh;
+            height: calc(100vh + 5px);
             width: 100vw;
             position: relative;
             overflow: hidden;
             border: none;
-            object-fit: cover;
+            /* object-fit: cover; */
+            object-fit: contain;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -205,7 +206,15 @@ html {
 
     z-index: 10;
 
-    @media (max-height: 400px) {
+    @media (max-width: 1247px) {
+        max-width: 715px;
+    }
+
+    @media (max-width: 613px) {
+        bottom: 10vh;
+    }
+
+    @media (max-height: 430px) {
         bottom: 10vh;
     }
 
@@ -227,11 +236,19 @@ html {
 
         padding: .65rem 2rem;
 
-        background-color: rgba($color: #000000, $alpha: .15);
+        background-color: rgba($color: #000000, $alpha: .25);
         cursor: pointer;
         
         &:hover{
             background-color: rgba($color: #000000, $alpha: .55);
+        }
+
+        @media (max-height: 389px) {
+            min-width: 160px;
+        }
+
+        @media (max-width: 320px) {
+            min-width: 160px;
         }
     }
 }
